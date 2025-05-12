@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net9.0</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <Platforms>AnyCPU</Platforms>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>Hides a property from OpenAPI/Swagger documentation without affecting JSON serialization. Use this when a property should be used at runtime but not exposed in the public API contract.</Description>
+        <Version Condition="'$(BUILD_VERSION)' == ''">3.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
+        <AssemblyName>Soenneker.Swashbuckle.Attributes.IgnoreProperty</AssemblyName>
+        <PackageId>Soenneker.Swashbuckle.Attributes.IgnoreProperty</PackageId>
+        <PackageTags>swashbuckle attributes ignoreproperty ignore properties property openapi api swagger openapiignorepropery object csharp dotnet c# .net</PackageTags>
+        <Copyright>Copyright © 2025 Jake Soenneker</Copyright>
+        <Authors>Jake Soenneker</Authors>
+        <Company>https://soenneker.com</Company>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/soenneker/soenneker.swashbuckle.attributes.ignoreproperty</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/soenneker/soenneker.swashbuckle.attributes.ignoreproperty</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryBranch>main</RepositoryBranch>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <LangVersion>latest</LangVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="..\icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>
