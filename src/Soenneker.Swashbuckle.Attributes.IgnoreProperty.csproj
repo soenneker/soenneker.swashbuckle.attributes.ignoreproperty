@@ -14,7 +14,7 @@
         <AssemblyName>Soenneker.Swashbuckle.Attributes.IgnoreProperty</AssemblyName>
         <PackageId>Soenneker.Swashbuckle.Attributes.IgnoreProperty</PackageId>
         <PackageTags>swashbuckle attributes ignoreproperty ignore properties property openapi api swagger openapiignorepropery object csharp dotnet c# .net</PackageTags>
-        <Copyright>Copyright © 2025 Jake Soenneker</Copyright>
+        <Copyright>Copyright © 2025-2026 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
