@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/.github/">
+    <File Path=".github/renovate.json" />
+  </Folder>
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/build-and-test.yml" />
+    <File Path=".github/workflows/publish-package.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Soenneker.Swashbuckle.Attributes.IgnoreProperty.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Soenneker.Swashbuckle.Attributes.IgnoreProperty.Tests/Soenneker.Swashbuckle.Attributes.IgnoreProperty.Tests.csproj" />
+  </Folder>
+</Solution>
