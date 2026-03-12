@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Swashbuckle.Attributes.IgnoreProperty.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Swashbuckle.Attributes.IgnoreProperty\Soenneker.Swashbuckle.Attributes.IgnoreProperty.csproj" />
     </ItemGroup>
 
     <ItemGroup>
