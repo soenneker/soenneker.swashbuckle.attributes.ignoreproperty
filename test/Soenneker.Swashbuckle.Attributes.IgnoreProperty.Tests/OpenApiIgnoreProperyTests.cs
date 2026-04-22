@@ -1,11 +1,10 @@
-﻿using Soenneker.Tests.Unit;
-using Xunit;
+using Soenneker.Tests.Unit;
 
 namespace Soenneker.Swashbuckle.Attributes.IgnoreProperty.Tests;
 
 public sealed class OpenApiIgnorePropertyTests : UnitTest
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
