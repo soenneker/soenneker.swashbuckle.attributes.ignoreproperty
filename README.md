@@ -5,14 +5,37 @@
 
 # Soenneker.Swashbuckle.Attributes.IgnoreProperty
 
-Hides a property from OpenAPI/Swagger documentation without affecting JSON serialization. Use this when a property should be used at runtime but not exposed in the public API contract.
+Provides `OpenApiIgnoreProperty`, a marker for properties that should be omitted from generated OpenAPI schemas without changing runtime serialization.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Soenneker.Swashbuckle.Attributes.IgnoreProperty
 ```
 
-## What you get
+## Usage
 
-- `OpenApiIgnoreProperty` — Hides a property from OpenAPI/Swagger documentation without affecting JSON serialization. Use this when a property should be used at runtime but not exposed in the public API contract.
+```csharp
+using Soenneker.Swashbuckle.Attributes.IgnoreProperty;
+
+public sealed class UserResponse
+{
+    public required string DisplayName { get; init; }
+
+    [OpenApiIgnoreProperty]
+    public string? InternalCorrelationId { get; init; }
+}
+```
+
+The attribute is metadata only. To make Swashbuckle act on it, install `Soenneker.Swashbuckle.SchemaFilters.IgnoreProperties` and register its filter:
+
+```csharp
+using Soenneker.Swashbuckle.SchemaFilters.IgnoreProperties;
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SchemaFilter<IgnorePropertiesSchemaFilter>();
+});
+```
+
+This affects the generated API contract only. It does not stop ASP.NET Core, System.Text.Json, or Newtonsoft.Json from reading or writing the property. Use the serializer's ignore attribute as well when the value must not appear in runtime JSON.
