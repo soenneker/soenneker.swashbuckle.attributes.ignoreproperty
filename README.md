@@ -38,4 +38,4 @@ builder.Services.AddSwaggerGen(options =>
 });
 ```
 
-This affects the generated API contract only. It does not stop ASP.NET Core, System.Text.Json, or Newtonsoft.Json from reading or writing the property. Use the serializer's ignore attribute as well when the value must not appear in runtime JSON.
+This affects the generated API contract only. It does not stop ASP.NET Core or System.Text.Json from reading or writing the property. Use the serializer's ignore attribute as well when the value must not appear in runtime JSON.
